@@ -10,6 +10,9 @@ import {
 } from 'react';
 import toast from 'react-hot-toast';
 
+import logo from '../images/logo.png';
+import occlogo from '../images/whiteoutline.png';
+
 import { useTranslation } from 'next-i18next';
 
 import { getEndpoint } from '@/utils/app/api';
@@ -347,14 +350,20 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     };
   }, [messagesEndRef]);
 
-  return (
-    <div className="relative flex-1 overflow-hidden bg-white dark:bg-[#343541]">
+  return (    
+    <div className="relative flex-1 overflow-hidden bg-[url('/background.jpg')]">
+       <div className="text-center text-4xl font-bold text-black dark:text-orange-500">        
+              <div className='grid grid-cols-4 gap-4 w-full'>
+              <div></div>
+              <div><img className='logo' src='/whiteoutline.png' alt="Treasury OCC Logo"/> </div>
+              <div className='justify-end'><img  className='logo' src='/logo.png' alt="GovChat Logo"  /> </div>
+              <div></div>
+              
+              </div>
+        </div>       
       {!(apiKey || serverSideApiKeyIsSet) ? (
-        <div className="mx-auto flex h-full w-[300px] flex-col justify-center space-y-6 sm:w-[600px]">
-          <div className="text-center text-4xl font-bold text-black dark:text-white">
-            Welcome to Gov Chat
-          </div>
-          <div className="text-center text-lg text-black dark:text-white">
+        <div className="mx-auto flex h-full w-[300px] flex-col justify-center space-y-6 sm:w-[600px]">          
+                    <div className="text-center text-lg text-black dark:text-white">
             <div className="mb-8">{`Gov Chat is an open source clone of OpenAI's ChatGPT UI.`}</div>
           </div>
           <div className="text-center text-gray-500 dark:text-gray-400">
@@ -402,7 +411,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                         <Spinner size="16px" className="mx-auto" />
                       </div>
                     ) : (
-                      'Gov Chat'
+                      <></>
                     )}
                   </div>
 

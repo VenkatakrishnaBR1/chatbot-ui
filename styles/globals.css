@@ -41,3 +41,8 @@ html {
 pre:has(div.codeblock) {
   padding: 0;
 }
+
+img.logo {
+  height: 2.5em;
+  max-height: 2.5em;
+}
