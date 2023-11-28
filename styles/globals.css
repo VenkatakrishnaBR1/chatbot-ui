@@ -43,6 +43,23 @@ pre:has(div.codeblock) {
 }
 
 img.logo {
-  height: 2.5em;
+ /* height: 2.5em;
   max-height: 2.5em;
+  
+  */
+  max-width: 17em;
+}
+
+.box{
+  background-color: #1f2d4d;
+  color:whitesmoke;
+
+}
+
+.buttonblack{
+  color: black;
+}
+
+.buttonwhite{
+  color: whitesmoke;
 }

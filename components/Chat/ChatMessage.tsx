@@ -128,17 +128,17 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
     <div
       className={`group md:px-4 ${
         message.role === 'assistant'
-          ? 'border-b border-black/10 bg-gray-50 text-gray-800 dark:border-gray-900/50 dark:bg-[#444654] dark:text-gray-100'
-          : 'border-b border-black/10 bg-white text-gray-800 dark:border-gray-900/50 dark:bg-[#343541] dark:text-gray-100'
+          ? 'border-b border-black/10 bg-[#2a41a1] text-gray-800 '
+          : 'border-b border-black/10 bg-[#1f2d4d] text-gray-800 '
       }`}
       style={{ overflowWrap: 'anywhere' }}
     >
       <div className="relative m-auto flex p-4 text-base md:max-w-2xl md:gap-6 md:py-6 lg:max-w-2xl lg:px-0 xl:max-w-3xl">
         <div className="min-w-[40px] text-right font-bold">
           {message.role === 'assistant' ? (
-            <IconRobot size={30} />
+            <IconRobot className='buttonwhite' size={30} />
           ) : (
-            <IconUser size={30} />
+            <IconUser className='buttonwhite' size={30} />
           )}
         </div>
 
@@ -149,7 +149,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
                 <div className="flex w-full flex-col">
                   <textarea
                     ref={textareaRef}
-                    className="w-full resize-none whitespace-pre-wrap border-none dark:bg-[#343541]"
+                    className="w-full resize-none whitespace-pre-wrap border-none "
                     value={messageContent}
                     onChange={handleInputChange}
                     onKeyDown={handlePressEnter}
@@ -247,7 +247,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
                   },
                   th({ children }) {
                     return (
-                      <th className="break-words border border-black bg-gray-500 px-3 py-1 text-white dark:border-white">
+                      <th className="break-words border border-black  px-3 py-1 text-white dark:border-white">
                         {children}
                       </th>
                     );

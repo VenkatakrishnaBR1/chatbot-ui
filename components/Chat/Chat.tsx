@@ -11,7 +11,7 @@ import {
 import toast from 'react-hot-toast';
 
 import logo from '../images/logo.png';
-import occlogo from '../images/whiteoutline.png';
+import occlogo from '../images/.png';
 
 import { useTranslation } from 'next-i18next';
 
@@ -353,12 +353,9 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
   return (    
     <div className="relative flex-1 overflow-hidden bg-[url('/background.jpg')]">
        <div className="text-center text-4xl font-bold text-black dark:text-orange-500">        
-              <div className='grid grid-cols-4 gap-4 w-full'>
-              <div></div>
-              <div><img className='logo' src='/whiteoutline.png' alt="Treasury OCC Logo"/> </div>
-              <div className='justify-end'><img  className='logo' src='/logo.png' alt="GovChat Logo"  /> </div>
-              <div></div>
-              
+              <div className='w-full flex justify-center'>              
+              <div><img className='logo' src='/logot.png' alt="Treasury OCC Logo"/> </div>            
+                          
               </div>
         </div>       
       {!(apiKey || serverSideApiKeyIsSet) ? (
@@ -416,7 +413,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                   </div>
 
                   {models.length > 0 && (
-                    <div className="flex h-full flex-col space-y-4 rounded-lg border border-neutral-200 p-4 dark:border-neutral-600">
+                    <div className="flex h-full flex-col space-y-4 rounded-lg box border border-neutral-200 p-4 dark:border-neutral-600">
                       {
                        // <ModelSelect />
                       }
@@ -446,7 +443,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
               </>
             ) : (
               <>
-                <div className="sticky top-0 z-10 flex justify-center border border-b-neutral-300 bg-neutral-100 py-2 text-sm text-neutral-500 dark:border-none dark:bg-[#444654] dark:text-neutral-200">
+                <div className="sticky top-0 z-10 flex justify-center border border-b-neutral-300 py-2 text-sm text-neutral-500 dark:border-none  dark:text-neutral-200">
                   {t('Temp')}
                   : {selectedConversation?.temperature} |
                   <button
@@ -489,7 +486,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                 {loading && <ChatLoader />}
 
                 <div
-                  className="h-[162px] bg-white dark:bg-[#343541]"
+                  className="h-[162px] "
                   ref={messagesEndRef}
                 />
               </>
