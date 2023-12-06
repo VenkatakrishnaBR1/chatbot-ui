@@ -128,8 +128,8 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
     <div
       className={`group md:px-4 ${
         message.role === 'assistant'
-          ? 'border-b border-black/10 bg-[#2a41a1] text-gray-800 '
-          : 'border-b border-black/10 bg-[#1f2d4d] text-gray-800 '
+          ? 'border-b border-black/10 bg-[#05174e] text-gray-800 '
+          : 'border-b border-black/10 bg-[#061335] text-gray-800 '
       }`}
       style={{ overflowWrap: 'anywhere' }}
     >

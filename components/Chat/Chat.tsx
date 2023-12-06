@@ -351,10 +351,10 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
   }, [messagesEndRef]);
 
   return (    
-    <div className="relative flex-1 overflow-hidden bg-[url('/background.jpg')]">
+    <div className="relative flex-1 overflow-hidden bg-[url('/backgroundarker.jpg')]">
        <div className="text-center text-4xl font-bold text-black dark:text-orange-500">        
               <div className='w-full flex justify-center'>              
-              <div><img className='logo' src='/logot.png' alt="Treasury OCC Logo"/> </div>            
+              <div><img className='logo' src='/logonew.png' alt="Treasury OCC Logo"/> </div>            
                           
               </div>
         </div>       
