@@ -75,6 +75,11 @@ export const OpenAIStream = async (
     temperature: temperature,
     stream: true,
   };
+
+  //console.log("!!!Sending")
+    //console.log("URL: " + url);
+    //console.log("Header: " + JSON.stringify(header));
+    //console.log("Messages: " +JSON.stringify(body));
   const res = await fetch(url, {
     headers: header,
     method: 'POST',
@@ -119,13 +124,15 @@ export const OpenAIStream = async (
           if(data !== "[DONE]"){
             try {
               const json = JSON.parse(data);
-              if (json.choices[0].finish_reason != null) {
+              if (json.choices[0] && json.choices[0].finish_reason && json.choices[0].finish_reason != null) {
                 controller.close();
                 return;
               }
-              const text = json.choices[0].delta.content;
-              const queue = encoder.encode(text);
-              controller.enqueue(queue);
+              if (json.choices[0] && json.choices[0].delta) {
+                const text = json.choices[0].delta.content;
+                const queue = encoder.encode(text);
+                controller.enqueue(queue);
+              }
             } catch (e) {
               controller.error(e + " Data: " + data);              
             }
