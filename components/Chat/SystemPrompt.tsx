@@ -193,7 +193,11 @@ export const SystemPrompt: FC<Props> = ({
 
   return (
     <div className="flex flex-col">
-      <label className="mb-2 text-left ">
+      <div  className="mb-2 text-left text-xs ">
+      You are accessing a system providing Generative artificial intelligence (AI) capabilities. You must not enter, upload, or otherwise transmit OCC non-public information, including financial supervision information, to this service.
+      All use of this service via OCC-issued devices is subject to OCC policy, including Secure Use of OCC Information Resources PPM-4300-2 and Proper Handling of Controlled Unclassified Information PPM-4120-2 , which describe employee responsibilities to protect OCC systems and information, as well as applicable whistleblower protections under 5 U.S.C. 2302(b)(13).
+      </div>
+      <label className="mb-2 text-left ">      
         {t('System Prompt')}
       </label>
       <textarea

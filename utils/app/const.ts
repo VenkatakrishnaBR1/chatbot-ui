@@ -1,6 +1,7 @@
 export const DEFAULT_SYSTEM_PROMPT =
-  process.env.NEXT_PUBLIC_DEFAULT_SYSTEM_PROMPT ||
-  "You are Gov Chat an AI Assistant using Azure OpenAI. Follow the user's instructions carefully. Respond using markdown.";
+  process.env.NEXT_PUBLIC_DEFAULT_SYSTEM_PROMPT 
+  ||
+  "You are OCC Chat an AI Assistant using Azure OpenAI. Follow the user's instructions carefully. Respond using markdown.";
 
 export const OPENAI_API_HOST =
   process.env.OPENAI_API_HOST || 'https://api.openai.com';
