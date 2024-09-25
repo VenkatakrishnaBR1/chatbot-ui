@@ -27,6 +27,7 @@ import HomeContext from '@/pages/api/home/home.context';
 import { PluginSelect } from './PluginSelect';
 import { PromptList } from './PromptList';
 import { VariableModal } from './VariableModal';
+import { Ruge_Boogie } from 'next/font/google';
 
 interface Props {
   onSend: (message: Message, plugin: Plugin | null) => void;
@@ -258,7 +259,7 @@ export const ChatInput = ({
 
   return (
     <div className="absolute bottom-0 left-0 w-full md:pt-2">
-      <div className="stretch mx-2 mt-4 flex flex-row gap-3 last:mb-2 md:mx-4 md:mt-[52px] md:last:mb-6 lg:mx-auto lg:max-w-3xl">
+      <div className="stretch mx-2 mt-4 flex flex-row gap-3 last:mb-2 md:mx-4 md:mt-[52px] md:last:mb-6 lg:mx-auto lg:max-w-3xl" >
         {messageIsStreaming && (
           <button
             className="buttonblack absolute top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded border border-neutral-200 bg-white py-2 px-4  md:mb-0 md:mt-2"
@@ -279,7 +280,7 @@ export const ChatInput = ({
             </button>
           )}
 
-        <div className="relative mx-2 flex w-full flex-grow flex-col rounded-md border border-black/10 bg-white shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:border-gray-900/50 dark:bg-[#40414F] dark:text-white dark:shadow-[0_0_15px_rgba(0,0,0,0.10)] sm:mx-4">
+        <div className="relative mx-2 flex w-full flex-grow flex-col rounded-md border border-black/10 bg-white shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:border-gray-900/50 dark:bg-[#40414F] dark:text-white dark:shadow-[0_0_15px_rgba(0,0,0,0.10)] sm:mx-4" style={{backgroundColor:'unset'}}>
           <button
             className=" buttonblack absolute left-2 top-2 rounded-sm p-1 opacity-60 hover:bg-neutral-200 dark:bg-opacity-50 "
             onClick={() => setShowPluginSelect(!showPluginSelect)}
@@ -345,6 +346,11 @@ export const ChatInput = ({
               <IconSend size={18} />
             )}
           </button>
+        
+          <div className="text-xs text-black rounded-full border-t-2 border-neutral-800  dark:border-neutral-100 right-12 top-12 rounded-sm "style={{ backgroundColor: 'rgb(192,193,195)', marginTop:'1em', marginLeft:'1em', marginRight:'1em', padding:'0.2em' }  }>
+            OCCchat is a generative artificial intelligence (AI) service. You are accountable for ensuring the accuracy and integrity of all AI generated products from this service that you integrate or introduce into your OCC tasks and work products, in alignment with applicable agency-wide or organizational unit standards.
+          </div>
+
 
           {showScrollDownButton && (
             <div className="absolute bottom-12 right-0 lg:bottom-0 lg:-right-10">

@@ -439,7 +439,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                 </div>
               </>
             ) : (
-              <>
+              <div>
                 <div className="sticky top-0 z-10 flex justify-center border border-b-neutral-300 py-2 text-sm text-neutral-500 dark:border-none  dark:text-neutral-200">
                   {t('Temp')}
                   : {selectedConversation?.temperature} |
@@ -464,7 +464,8 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                     </div>
                   </div>
                 )}
-
+              
+              <div className='max-h-full mb-24'>  
                 {selectedConversation?.messages.map((message, index) => (
                   <MemoizedChatMessage
                     key={index}
@@ -480,14 +481,15 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                     }}
                   />
                 ))}
-
+              
+                </div>
                 {loading && <ChatLoader />}
 
                 <div
                   className="h-[162px] "
                   ref={messagesEndRef}
                 />
-              </>
+              </div>
             )}
           </div>
 
