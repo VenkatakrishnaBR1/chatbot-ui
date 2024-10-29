@@ -348,7 +348,7 @@ export const ChatInput = ({
           </button>
         
           <div className="text-xs text-black rounded-full border-t-2 border-neutral-800  dark:border-neutral-100 right-12 top-12 rounded-sm "style={{ backgroundColor: 'rgb(192,193,195)', marginTop:'1em', marginLeft:'1em', marginRight:'1em', padding:'0.2em' }  }>
-            OCCchat is a generative Artificial Intelligence (AI) service. You are accountable for ensuring the accuracy and integrity of all AI generated products from this service that you integrate or introduce into your OCC tasks and work products, in alignment with applicable agency-wide or organizational unit standards.
+            OCCchat is a generative Artificial Intelligence (AI) Service. You are accountable for ensuring the accuracy and integrity of all AI generated products from this service that you integrate or introduce into your OCC tasks and work products, in alignment with applicable agency-wide or organizational unit standards.
           </div>
 
 
